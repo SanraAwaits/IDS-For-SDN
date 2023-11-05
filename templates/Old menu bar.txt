@@ -1,0 +1,37 @@
+old start
+  <header id="header" class="fixed-top d-flex align-items-cente">
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-lg-between">
+
+      <h1 class="col-lg-8"><a href="index.html"> <span>Disaster prediction from Twitter</span></a></h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html" class="logo me-auto me-lg-0"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+      <nav id="navbar" class="navbar order-last order-lg-0">
+        <ul>
+          <li><a class="nav-link scrollto" href="{{ url_for('first')}}">Home</a></li>
+          <li><a class="nav-link scrollto" href="{{ url_for('login')}}">Login</a></li>
+		    <li><a class="nav-link scrollto" href="{{ url_for('upload')}}">upload</a></li>
+           
+		  <li class="dropdown"><a href="#"><span>prediction</span> <i class="bi bi-chevron-right"></i></a>
+                <ul>
+                  <li><a href="{{ url_for('prediction')}}">Theft_crime</a></li>
+				  <li><a href="{{ url_for('total')}}">Total_crime</a></li>
+                   
+                </ul>
+              </li>
+			    <li class="dropdown"><a href="#"><span>Analysis</span> <i class="bi bi-chevron-right"></i></a>
+                <ul>
+                  <li><a href="{{ url_for('theft')}}">Theft_crime</a></li>
+				  <li><a href="{{ url_for('chart')}}">Total_crime</a></li>
+                   
+                </ul>
+              </li>
+		 
+           
+           </ul>
+          
+       
+     </nav>
+    </div>
+  </header><!-- End Header -->
+

@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>crime</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+   <link href="../static/img/favicon.png" rel="icon">
+  <link href="../static/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="../static/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="../static/vendor/aos/aos.css" rel="stylesheet">
+  <link href="../static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../static/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../static/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="../static/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="../static/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="../static/style.css" rel="stylesheet">
+  <!-- =======================================================
+  * Template Name: Restaurantly - v3.0.1
+  * Template URL: https://bootstrapmade.com/restaurantly-restaurant-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Top Bar ======= -->
+ 
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top d-flex align-items-cente">
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-lg-between">
+
+      <h1 class="col-lg-8"><a href="index.html"> <span>Crime Hotspots</span></a></h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html" class="logo me-auto me-lg-0"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+      
+      <nav id="navbar" class="navbar order-last order-lg-0">
+        <ul>
+          <li><a class="nav-link scrollto" href="{{ url_for('first')}}">Home</a></li>
+          <li><a class="nav-link scrollto" href="{{ url_for('login')}}">Login</a></li>
+		    <li><a class="nav-link scrollto" href="{{ url_for('upload')}}">upload</a></li>
+           
+		  <li class="dropdown"><a href="#"><span>prediction</span> <i class="bi bi-chevron-right"></i></a>
+                <ul>
+                  <li><a href="{{ url_for('prediction')}}">Theft_crime</a></li>
+                  <li><a href="{{ url_for('crime')}}">Murder_crime</a></li>
+                  <li><a href="{{ url_for('crimes')}}">Rape_crime</a></li>
+				  <li><a href="{{ url_for('total')}}">Total_crime</a></li>
+                   
+                </ul>
+              </li>
+			    <li class="dropdown"><a href="#"><span>Analysis</span> <i class="bi bi-chevron-right"></i></a>
+                <ul>
+                  <li><a href="{{ url_for('theft')}}">Theft_crime</a></li>
+                  <li><a href="{{ url_for('murder')}}">Murder_crime</a></li>
+                  <li><a href="{{ url_for('rape')}}">Rape_crime</a></li>
+				  <li><a href="{{ url_for('chart')}}">Total_crime</a></li>
+                   
+                </ul>
+              </li>
+		 
+           
+           </ul>
+          
+       
+     </nav>
+     
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex align-items-center">
+    <div class="container position-relative text-center text-lg-start" data-aos="zoom-in" data-aos-delay="100">
+      <div class="row">
+        <div class="col-lg-8">
+       <h1><span>Predicting Crime Hotspots</span></h1>
+
+          
+        </div>
+        
+
+      </div>
+    </div>
+  </section> 
+
+ 
+
+    
+
+ 
+    <section id="book-a-table" class="book-a-table">
+      <div class="container" data-aos="fade-up">
+
+        
+           
+    
+ <div class="section-title">
+           
+         <center> <p>Murder_crime</p></center>
+        </div>
+		  <body class = "background">
+
+     
+
+    <div class="login">
+	 
+	</br>
+	</br>
+	
+   <center> <form action="{{ url_for('predicts')}}"method="post">
+      Year: <select type="text" style="width:130px;height:40px"   name="Year" required="required" placeholder="Year">
+						<option value="1">2001</option>
+						<option value="2">2002 </option>
+						<option value="3">2003</option>    
+                        <option value="4">2004</option> 
+						<option value="5">2005</option>
+						<option value="6">2006 </option>
+						<option value="7">2007</option>    
+                        <option value="8">2008</option> 
+						<option value="9">2009</option>
+						<option value="10">2010 </option>
+						<option value="11">2011</option>    
+                        <option value="12">2012</option> 
+						<option value="13">2013</option>
+						<option value="14">2014 </option>
+						<option value="15">2015</option>    
+                        <option value="16">2016</option> 
+						<option value="17">2017</option>    
+                        <option value="18">2018</option> 
+						<option value="10">2019</option> 
+						  <option value="9">2020</option> 
+						   <option value="8">2021</option>
+                           <option value="1">2022</option>
+						
+						
+						</select>
+ &nbsp;&nbsp;&nbsp;&nbsp;State: <select type="text" style="width:130px;height:40px"   name="state" required="required" placeholder="state">
+						<option value="3">Tamil nadu</option>
+						<option value="0">Delhi </option>
+						<option value="1">Kerala</option>    
+                        <option value="2">Puducherry</option> </select>
+  &nbsp;&nbsp;&nbsp;&nbsp;District: <select type="text" style="width:130px;height:40px"  name="district" required="required" placeholder="District">
+						 
+						<optgroup label="Tamil nadu">
+						<option value="0">Ariyalur</option>
+						<option value="1">Chennai</option>
+						<option value="2">Chennai rly</option>
+						<option value="3">Chennai city</option>
+						<option value="4">Coimbatore</option>
+						<option value="5">Coimbatore City</option>
+						<option value="6">Cuddalore</option>
+						<option value="7">Dharmapuri</option>
+						<option value="8">Dindigul</option>
+						<option value="9">Erode</option>
+						<option value="10">Kanchipuram</option>
+						<option value="11">Kanyakumari</option>
+						<option value="12">Karur</option>
+						<option value="13">Krishnagiri</option>
+						<option value="14">Madurai</option>
+						<option value="15">Madurai City</option>
+						<option value="16">Nagapattinam</option>
+						<option value="17">Namakkal</option>
+						<option value="18">Nilgiris</option>
+						<option value="19">Perambalur</option>
+						<option value="20">Pudukottai</option>
+						<option value="21">Ramnathapuram </option>
+						<option value="22">Salem</option>
+						<option value="23">Salem City</option>
+						<option value="24">Sivagangai</option>
+						<option value="25">Thanjavur</option>
+						<option value="26">Theni</option>
+						<option value="27">Thirunelveli</option>
+						<option value="28">Thirunelveli City</option>
+						<option value="29">Thiruvallur</option>
+						<option value="30">Thiruvannamalai</option>
+						<option value="31">Thiruvarur </option>
+						<option value="32">Thoothukudi</option>
+						<option value="33">Tiruppur</option>
+						<option value="34">Trichy rly</option>
+						<option value="35">Trichy</option>
+						<option value="36">Trichy City</option>
+						<option value="37">Vellore</option>
+						<option value="38">Villupuram</option>
+						<option value="39">Virudhunagar</option>
+						<option value="40">Railway Chennai</option>
+						<option value="41">Railway Trichy </option>
+						<option value="42">Thoothugudi</option>
+						<option value="43">Tiruppur City</option>
+						 
+						 </optgroup>
+						 <optgroup label="Delhi">
+						 
+						<option value="44">CENTRAL</option>
+						<option value="45">DELHI UT TOTAL</option>
+						<option value="46">EAST</option>
+						<option value="47">G.R.P.(RLY)</option>
+						<option value="48">I.G.I. AIRPORT</option>
+						<option value="49">NEW DELHI</option>
+						<option value="50">NORTH</option>
+						
+						<option value="61">NORTH EAST</option>
+						<option value="62">NORTH WEST</option>
+						<option value="63">S.T.F.</option>
+						<option value="64">SOUTH</option>
+						<option value="65">SOUTH WEST</option>
+						<option value="66">WEST</option>
+						<option value="67">SPL CELL</option>
+						<option value="68">IGI AIRPORT</option>
+						<option value="69">NORTH-EAST</option>
+						<option value="70">NORTH-WEST</option>
+						<option value="71">SOUTH-WEST</option>
+						<option value="72">GRP(RLY)</option>
+						<option value="73">STF</option>
+						<option value="74">OUTER</option>
+						<option value="75">CAW</option>
+						<option value="76">CRIME BRANCH</option>
+						<option value="77">EOW</option>
+						<option value="78">SOUTH-EAST </option>
+						<option value="79">METRO</option>
+						<option value="80">RAILWAY</option>
+						<option value="81">spl CELL</option>
+						<option value="82">SPUWAC</option>
+						<option value="83">VIGILANCE</option>
+						<option value="84">ROHINI</option>
+						<option value="85">SHAHDARA</option>
+						<option value="86">DWARKA</option>
+						 
+						 
+						 </optgroup>
+						 <optgroup label="Kerala">
+						 
+						<option value="87">Alapuzha</option>
+						<option value="88">Ernakulam Commr.</option>
+						<option value="89">Ernakulam Rural</option>
+						<option value="90">Idukki</option>
+						<option value="91">Kannur</option>
+						<option value="92">Kasargod</option>
+						<option value="93">Kollam</option>
+						<option value="94">Kottayam</option>
+						<option value="95">Kozhikode Commr.</option>
+						<option value="96">Kozhikode Rural</option>
+						<option value="97">Malappuram</option>
+						<option value="98">Palakkad</option>
+						<option value="99">Pathanamthitta</option>
+						<option value="100">Railways</option>
+						<option value="101">Thrissur</option>
+						<option value="102">Thrissur Commr.</option>
+						<option value="103">Trivandrum Rural</option>
+						<option value="104">Wayanadu</option>
+						<option value="105">Kollam Rural</option>
+						<option value="106">Kollam Commr</option>
+						<option value="106">Kollam Commr.</option>
+						<option value="107">Trivandrum commd</option>
+						<option value="107">Trivandrum Commr.</option>
+						<option value="108">Thrissur Rural</option>
+						<option value="109">Crime Branch</option>
+						
+						 </optgroup>
+						 
+						
+						 <optgroup label="Puducherry">
+						 
+						 <option value="110">PUDUCHERRY</option>
+						 <option value="110">Puducherry</option>
+						 <option value="110">PONDICHERRY</option>
+						 <option value="111">KARAIKAL</option>
+						 <option value="111">Karaikal</option>
+						 </optgroup> 
+					</select> 
+ 
+  
+ 
+ </br>
+ </br>
+ </br>
+           
+        <button type="submit" style="margin-left:30px" class="btn btn-primary btn-large" >Predict </button>
+    </form></center>
+   <br>
+   <br>
+   <h1>Total Murder_crime is:{{ prediction_text }}</h1>
+  <br>
+  <br>
+ 
+ </div>
+  
+</body> 
+				  
+		
+		
+		
+		
+      <!-- Portfolio Grid Items -->
+         </div> 
+    </section> 
+   
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+     
+
+    <div class="container">
+      <div class="copyright">
+        
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/restaurantly-restaurant-template/ -->
+         
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="../static/vendor/aos/aos.js"></script>
+  <script src="../static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../static/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="../static/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="../static/vendor/php-email-form/validate.js"></script>
+  <script src="../static/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="../static/js/main.js"></script>
+
+</body>
+
+</html>

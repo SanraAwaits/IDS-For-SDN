@@ -1,0 +1,55 @@
+##DOS##
+
+count             ==>-0.105270504
+dst_host_count    ==>0.167454386
+dst_host_srv_count==>0.017299924
+dst_host_count    ==>-0.1395048
+same_port_number  ==>0.624362594
+status_connection ==>SF
+last_flag         ==>-0.146935117
+login             ==>0
+connection_aggregated_count ==>0.119280626
+connections_aggregated_flag ==>-0.49193098
+connection_type ==>http
+
+##PROBE##
+
+count             ==>-0.071763239
+dst_host_count    ==>-0.037133363
+dst_host_srv_count==>-0.004396287
+dst_host_count    ==>0.059499272
+same_port_number  ==>-0.395978647
+status_connection ==>S0
+last_flag         ==>-0.278755027
+login             ==>1
+connection_aggregated_count ==>0.076679167
+connections_aggregated_flag ==>-0.060378215
+connection_type ==>https
+
+##R2L##
+
+count             ==>
+dst_host_count    ==>
+dst_host_srv_count==>
+dst_host_count    ==>
+same_port_number  ==>
+status_connection ==>
+last_flag         ==>
+login             ==>
+connection_aggregated_count ==>
+connections_aggregated_flag ==>
+connection_type ==>
+
+##U2R##
+
+count             ==>
+dst_host_count    ==>
+dst_host_srv_count==>
+dst_host_count    ==>
+same_port_number  ==>
+status_connection ==>
+last_flag         ==>
+login             ==>
+connection_aggregated_count ==>
+connections_aggregated_flag ==>
+connection_type ==>
